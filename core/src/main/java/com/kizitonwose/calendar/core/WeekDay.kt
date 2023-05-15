@@ -10,10 +10,9 @@ import java.time.LocalDateTime
  *
  * @param date the date for this day.
  * @param position the [WeekDayPosition] for this day.
- * @param usedDateTime This field represents the time of the specified date,
- * depending on which the behavior and appearance of the calendar day can change
+ * @param usedDate This field [UsedDate] represents the day of the period on the calendar
  */
 @Immutable
 data class WeekDay(val date: LocalDate,
                    val position: WeekDayPosition,
-                   val usedDateTime: LocalDateTime) : Serializable
+                   var usedDate: UsedDate = UsedDate()) : Serializable
